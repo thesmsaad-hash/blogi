@@ -27,7 +27,8 @@ services:
         value: 242782715613352
       - key: CLOUDINARY_SECRET
         value: AYD3DYLbtug7e6GG-e37p8RJdrs
-  - type: psql
-    name: blogi-db
+
+databases:
+  - name: blogi-db
     databaseName: strapi
     user: strapi
