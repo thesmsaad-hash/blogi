@@ -1,0 +1,24 @@
+{
+    "kind": "collectionType",
+    "collectionName": "newsletter_subscribers",
+    "info": {
+        "singularName": "newsletter-subscriber",
+        "pluralName": "newsletter-subscribers",
+        "displayName": "NewsletterSubscriber"
+    },
+    "options": {
+        "draftAndPublish": false
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "Email": {
+            "type": "string",
+            "required": true,
+            "unique": true
+        },
+        "Active": {
+            "type": "boolean",
+            "default": true
+        }
+    }
+}

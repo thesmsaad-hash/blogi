@@ -1,0 +1,83 @@
+{
+    "kind": "collectionType",
+    "collectionName": "articles",
+    "info": {
+        "singularName": "article",
+        "pluralName": "articles",
+        "displayName": "Article"
+    },
+    "options": {
+        "draftAndPublish": false
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "Title": {
+            "type": "string",
+            "required": true
+        },
+        "Slug": {
+            "type": "uid",
+            "targetField": "Title"
+        },
+        "Content": {
+            "type": "richtext"
+        },
+        "PublishedDate": {
+            "type": "date"
+        },
+        "SEO_Description": {
+            "type": "string"
+        },
+        "Claps": {
+            "type": "integer",
+            "default": 0
+        },
+        "CoverImage": {
+            "type": "media",
+            "multiple": false,
+            "required": false,
+            "allowedTypes": [
+                "images",
+                "files",
+                "videos",
+                "audios"
+            ]
+        },
+        "Tags": {
+            "type": "string"
+        },
+        "Status": {
+            "type": "enumeration",
+            "enum": [
+                "Draft",
+                "Pending_AI_Review",
+                "Pending_Manual_Review",
+                "Published"
+            ],
+            "default": "Draft"
+        },
+        "Author": {
+            "type": "relation",
+            "relation": "manyToOne",
+            "target": "plugin::users-permissions.user"
+        },
+        "Twitter_Copy": {
+            "type": "text"
+        },
+        "LinkedIn_Copy": {
+            "type": "text"
+        },
+        "Guest_Name": {
+            "type": "string"
+        },
+        "Guest_Email": {
+            "type": "string"
+        },
+        "Guest_Phone": {
+            "type": "string"
+        },
+        "Guest_Username": {
+            "type": "string"
+        }
+    }
+}
